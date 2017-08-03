@@ -1,0 +1,2 @@
+Given an integer array replace each number with its next minimum number in the array. 
+For example if input array is {3,4,2,6,5,1,8,4} output would be{2,2,1,5,1,0,4,0}
