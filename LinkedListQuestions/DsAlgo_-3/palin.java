@@ -24,6 +24,8 @@ public class palin {
 
 
     }
+    
+    //Answer
 
     public static Node breakList(Node head){
 
@@ -77,6 +79,8 @@ public class palin {
 
 
     }
+    
+    //Answer
 
 
 
