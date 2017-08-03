@@ -24,6 +24,8 @@ public class palin {
 
 
     }
+    
+    //Answer
 
     public static Node reverseList(Node originalH){
         Node head = originalH;
@@ -43,7 +45,7 @@ public class palin {
 
     }
 
-
+    //Answer
 
     public static void addNode(Node head, int data){
         Node temp = head;
