@@ -15,6 +15,8 @@ public class palin {
 
 
     }
+    
+    //Answer
 
     public static void converter(Node head, int x){
 
@@ -49,7 +51,8 @@ public class palin {
             System.out.println(newCurrent.data);
             newCurrent = newCurrent.next;
         }
-
+        
+        //Answer
 
 
     }
