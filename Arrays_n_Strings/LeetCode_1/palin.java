@@ -16,9 +16,6 @@ public class palin {
     //Answer
 
     public static int[] twoSums(int[] array, int target){
-        if(array == null){
-            return array;
-        }
 
         int frontP = 0;
         int backP = array.length - 1;
