@@ -1,0 +1,5 @@
+Construct a Binary Search Tree from given postorder
+Given postorder traversal of a binary search tree, construct the BST.
+
+For example, if the given traversal is {1, 7, 5, 50, 40, 10}, then following tree should be constructed and root of the tree should be returned.
+http://www.geeksforgeeks.org/construct-a-binary-search-tree-from-given-postorder/
