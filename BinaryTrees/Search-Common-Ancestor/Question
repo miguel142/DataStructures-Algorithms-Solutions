@@ -1,0 +1,7 @@
+Lowest Common Ancestor in a Binary Tree | Set 2 (Using Parent Pointer)
+Given values of two nodes in a Binary Tree, find the Lowest Common Ancestor (LCA). It may be assumed that both nodes exist in the tree.
+
+BST_LCA
+
+For example, consider the Binary Tree in diagram, LCA of 10 and 14 is 12 and LCA of 8 and 14 is 8.
+http://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-tree-set-2-using-parent-pointer/
