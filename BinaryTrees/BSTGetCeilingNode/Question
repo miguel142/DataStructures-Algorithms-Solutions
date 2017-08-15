@@ -1,0 +1,4 @@
+There are numerous applications we need to find floor (ceil) value of a key in a binary search tree or sorted array.
+For example, consider designing memory management system in which free nodes are arranged in BST.
+Find best fit for the input request.
+http://www.geeksforgeeks.org/floor-and-ceil-from-a-bst/
