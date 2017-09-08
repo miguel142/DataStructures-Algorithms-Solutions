@@ -18,6 +18,7 @@ public class palin {
     }
 
 
+    //Answer
 
     public static int[] rotate(int[] ar, int k){
 
