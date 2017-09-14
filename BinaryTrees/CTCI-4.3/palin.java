@@ -4,20 +4,6 @@ import java.util.*;
 public class palin {
 
     public static void main(String[] args) {
-
-//        Node head = new Node(1);
-//        addNode(head, 2);
-//        addNode(head, 3);
-//        addNode(head, 3);
-//        addNode(head, 5);
-//        addNode(head, 6);
-
-
-
-        //{1, 7, 5, 50 ,40 ,10} post
-
-//        int[] array = {1, 7, 5, 50, 40, 10};
-//
         Node one = new Node(1);
         Node seven = new Node(7);
         Node five = new Node(5);
@@ -102,44 +88,6 @@ public class palin {
 
         return head;
     }
-
-
-
-
-//    public static void addNode(Node head, int data){
-//        Node temp = head;
-//        while(temp.next != null){
-//            temp = temp.next;
-//        }
-//
-//        temp.next = new Node(data);
-//    }
-
-
-
-
-
-
-//    public static class Node{
-//        Node next = null;
-//        int data;
-//
-//        Node(int data){
-//            this.data = data;
-//            this.next = next;
-//        }
-//    }
-
-
-//    public static void addNode(Node head, int data){
-//        Node temp = head;
-//        while(temp.next != null){
-//            temp = temp.next;
-//        }
-//
-//        temp.next = new Node(data);
-//    }
-
 
 
 }
