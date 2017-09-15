@@ -14,7 +14,7 @@ public class palin {
     }
 
 
-    //Answer
+    //Incomplete//Dont know why not working
 
     public static String longSub(String str){
         char[] array = str.toCharArray();
