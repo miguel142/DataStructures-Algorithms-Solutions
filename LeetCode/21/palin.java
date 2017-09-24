@@ -64,60 +64,72 @@ public class palin {
 //
 
         Node head = new Node(1);
+        Node head2 = new Node(2);
 
         addNode(head, 2);
         addNode(head, 3);
         addNode(head,6);
         addNode(head,7);
+        addNode(head,8);
+        addNode(head, 9);
+        addNode(head, 9);
 
-        Node head2 = new Node(4);
-        addNode(head2, 5);
+        addNode(head2,6);
+        addNode(head2,7);
         addNode(head2,8);
-        addNode(head2, 9);
 
-        head = validPar(head, head2);
+        head = merge(head, head2);
 
-       printL(head);
+        printL(head);
+
 
 
     }
 
 
-    //Answer  O(n^2) time 0(1) space
+    //Answer  O(n) time 0(1) space
 
-    public static Node validPar(Node head1, Node head2) {
+    public static Node merge(Node head, Node head2) {
+        Node curr1 = head;
+        Node curr2 = head2;
 
-        Stack<Node> st1 = reverse(head1);
-        Stack<Node> st2 = reverse(head2);
-        Node newHead = null;
+        if(curr1 == null || curr2 == null){
+            System.out.println("Invalid");
+            return head;
+        }
 
-        while(!st1.isEmpty() || !st2.isEmpty()){
+        Node newHead = new Node(curr2.data);
+        if(curr1.data > curr2.data){
+            newHead.data = curr2.data;
+            curr2 = curr2.next;
+        }
+        else{
+            newHead.data = curr1.data;
+            curr1 = curr1.next;
+        }
 
-            if(!st1.isEmpty() && !st2.isEmpty()) {
+        while(curr1 != null || curr2 != null){
 
-                if (st1.peek().data > st2.peek().data) {
-                    Node temp = st2.pop();
-                    temp.next = newHead;
-                    newHead = temp;
-                } else {
-                    Node temp = st1.pop();
-                    temp.next = newHead;
-                    newHead = temp;
+            if(curr1 != null && curr2 != null){
+
+                if(curr1.data > curr2.data){
+                    addNode(newHead, curr2.data);
+                    curr2 = curr2.next;
+                }
+                else{
+                    addNode(newHead, curr1.data);
+                    curr1 = curr1.next;
                 }
             }
 
-            else{
-                if(!st1.isEmpty()){
-                    Node temp = st1.pop();
-                    temp.next = newHead;
-                    newHead = temp;
-                }
+            else if(curr1 != null){
+                addNode(newHead, curr1.data);
+                curr1 = curr1.next;
+            }
 
-                else{
-                    Node temp = st2.pop();
-                    temp.next = newHead;
-                    newHead = temp;
-                }
+            else{
+                addNode(newHead, curr2.data);
+                curr2 = curr2.next;
             }
         }
 
@@ -125,26 +137,9 @@ public class palin {
 
     }
 
-    public static Stack<Node> reverse(Node head){
-
-        Node curr = head;
-        Stack<Node> st = new Stack<>();
-
-
-        while(curr != null){
-
-            Node temp = curr;
-            curr = curr.next;
-            temp.next = null;
-
-            st.push(temp);
-
-        }
 
 
 
-        return st;
-    }
 
 
 //    public static Node insert(Node head, Node node) {
