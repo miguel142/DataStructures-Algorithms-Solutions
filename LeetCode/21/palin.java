@@ -29,7 +29,7 @@ public class palin {
     }
 
 
-    //Answer  O(n) time 0(n) space
+    //Answer  O(n) time 0(n + m) space
 
     public static Node merge(Node head, Node head2) {
         Node curr1 = head;
