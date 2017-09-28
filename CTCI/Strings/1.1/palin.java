@@ -93,17 +93,18 @@ public class palin {
 
     public static boolean unique(String str) {
 
-        HashSet<Character> set = new HashSet<>();
+        if(str.length() > 128) return false;
+        boolean[] check = new boolean[128];
         char[] array = str.toCharArray();
 
         for(int i = 0; i < array.length; i++){
 
-            if(set.contains(array[i])){
+            if(check[array[i]]){
                 return false;
             }
 
             else{
-                set.add(array[i]);
+                check[array[i]] = true;
             }
         }
 
