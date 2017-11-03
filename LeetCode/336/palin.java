@@ -1,4 +1,5 @@
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class palin {
@@ -110,9 +111,11 @@ public class palin {
 //        insert(head, six);
 
 
-        String[] words = {"bat", "tab", "cat", "tac", "ac", "ca"};
+        String[] str = {"abcd", "dcba", "lls", "s", "sssll"};
 
-        System.out.println(median(words));
+
+        System.out.println(median(str));
+
 
     }
 
@@ -122,73 +125,51 @@ public class palin {
         HashMap<String, Integer> map = new HashMap<>();
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
 
-
-        //this is for regular
-        for(int i = 0; i < words.length; i++){
-            StringBuilder build = new StringBuilder();
-
-            build.append(words[i]);
-
-            map.put(build.reverse().toString(), i);
-
-        }
-
-        //for extra letter
-
-        for(int i = 0; i < words.length; i++){
-            StringBuilder build = new StringBuilder();
-
-            build.append(words[i].substring(0, words[i].length() - 1));
-
-            map.put(build.reverse().toString(), i);
-
-            StringBuilder st = new StringBuilder();
-
-            st.append(words[i].substring(1, words[i].length()));
-
-            map.put(st.reverse().toString(), i);
-        }
+        for(int i = 0;  i < words.length; i++){
 
 
-        for(int i = 0; i < words.length; i++){
+            for(int j = 0; j < words.length; j++){
+                StringBuilder build = new StringBuilder();
+                build.append(words[i]);
+                if(j != i){
 
-            StringBuilder build = new StringBuilder();
+                    build.append(words[j]);
 
-            if(map.containsKey(words[i])){
+                    if(check(build.toString())){
+                        ArrayList<Integer> set = new ArrayList<>();
 
-                ArrayList<Integer> sect = new ArrayList<>();
+                        set.add(i);
+                        set.add(j);
 
-                sect.add(i);
-                sect.add(map.get(words[i]));
-
-                list.add(sect);
+                        list.add(set);
+                    }
+                }
             }
         }
-
 
         return list;
 
     }
 
+    public static boolean check(String str){
+
+        char[] arr = str.toCharArray();
+       int front = 0;
+       int back = arr.length - 1;
 
 
+       while(front < back){
+           if(arr[front] != arr[back]){
+               return false;
+           }
 
+           ++front;
+           --back;
+       }
 
+        return true;
+    }
 
-//    public static Node sort(Node node, int[] arr, int l, int r){
-//
-//        if(l > r){
-//            return null;
-//        }
-//
-//        int mid = l - r / 2;
-//        Node newNode = new Node(arr[mid]);
-//        node.left = (newNode, arr, l, mid - 1);
-//        node.right = (newNode, arr, mid + 1, r);
-//
-//        return node;
-//    }
-//
 //    public static Node insert(Node head, Node node) {
 //
 //        if (head == null) {
@@ -369,19 +350,34 @@ public class palin {
 
 
 
+//
+//class Node{
+//    int data;
+//    Node left;
+//    Node right;
+//
+//    Node(int data){
+//        this.data = data;
+//        left = right = null;
+//    }
+//
+//
+//}
 
-class Node{
-    int data;
-    Node left;
-    Node right;
-
-    Node(int data){
-        this.data = data;
-        left = right = null;
-    }
-
-
-}
+//class Node{
+//    int label;
+//    LinkedList<Node> childs = new LinkedList<>();
+//
+//     Node(int data){
+//        this.label = data;
+//        childs = new LinkedList<Node>();
+//    }
+//
+//    public Node getNode(int source, int edge){
+//
+//    }
+//
+//}
 
 
 
